@@ -1,0 +1,26 @@
+version: 0.1
+cli:
+  version: 1.25.0
+plugins:
+  sources:
+    - id: trunk
+      ref: v1.11.0
+      uri: https://github.com/trunk-io/plugins
+runtimes:
+  enabled:
+    - node@24.20.0
+lint:
+  enabled:
+    - prettier@3.9.9
+actions:
+  definitions:
+    - id: project-check-pre-commit
+      description: Verify types, behavior, build, and formatting before a commit.
+      run: npm run check
+      triggers:
+        - git_hooks: [pre-commit]
+  enabled:
+    - project-check-pre-commit
+    - trunk-check-pre-push
+  disabled:
+    - trunk-fmt-pre-commit

@@ -126,6 +126,6 @@ trunk check --no-fix
 
 Tests create temporary Git repositories and local HTTP servers.
 They do not require API credentials or send review data to model providers.
-Trunk requires an initial Git commit for its lint checks; the bootstrap verification copy passed, while the main-repository check remains pending that first commit.
+Trunk checks formatting, and its pre-commit action runs `npm run check`.
 
 Read the [specification](docs/specs/2026-10-08-local-review-engine.md), [implementation plan](docs/plans/2026-10-08-local-review-engine.md), and [verification notes](docs/notes/2026-10-08-bootstrap.md).

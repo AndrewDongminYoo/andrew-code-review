@@ -70,7 +70,7 @@ A separate verification session checks candidate findings before the engine retu
 - [x] Initialize a scoped Trunk gate and prove a deliberate violation is detected in a disposable verification repository.
 - [x] Run `npm run check` through the configured pre-commit action and inspect a committed fixture with the built CLI.
 - [x] Run `trunk check --all --no-fix --filter=prettier` against the verification copy.
-- [ ] Run `trunk check --no-fix` in the main repository after an authorized first commit creates `refs/heads/main`.
+- [x] Run `trunk check --all --no-fix` in the main repository after an authorized first commit creates `refs/heads/main`.
 - [x] Review the complete implementation, repair verified findings, and record remaining limitations.
 
 ## Continuation

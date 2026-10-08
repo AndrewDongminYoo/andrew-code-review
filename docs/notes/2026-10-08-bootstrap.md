@@ -47,14 +47,17 @@ Verification completed on 2026-10-08.
 
 Trunk 1.25.0 recognizes the project pre-commit action and pre-push check.
 The repository-local `core.hooksPath` points to generated Trunk hooks, and both hook links exist.
-The pre-commit action was executed successfully without creating a repository commit.
+The pre-commit action passed both a direct invocation and the first authorized repository commit.
 
 `trunk init` and main-repository lint checks require an existing commit.
-The main branch is intentionally unborn because no commit was requested.
-A disposable Git repository containing the same source and configuration was used to verify the formatter gate.
+Before commit authorization, a disposable Git repository containing the same source and configuration was used to verify the formatter gate.
 A deliberately malformed `prettier-probe.js` produced one formatting issue and exit 1.
 After removing that probe, `trunk check --all --no-fix --filter=prettier` checked 29 files and passed.
-The native main-repository Trunk check remains pending the first authorized commit.
+After the operator requested semantic commits, the feature candidate was exported from the index and passed `npm ci --ignore-scripts` and `npm run check` in a separate temporary directory.
+The first commit, `32f495b`, preserved that verified candidate tree and passed the actual pre-commit hook.
+The native main-repository `trunk check --all --no-fix` then checked 29 files and passed.
+Trunk also displayed a historical action-failure notification for the earlier formatting failure.
+`trunk actions history project-check-pre-commit` confirmed that the two subsequent action runs exited successfully.
 
 ## Runtime Diagnostic
 
@@ -64,7 +67,7 @@ The warning concerned update configuration; the command is advisory and no globa
 ## Remaining Boundaries
 
 - No live billable model requests, historical-PR quality evaluation, or GitHub rendering checks were performed.
-- No main-repository staging, commits, remotes, pushes, review publication, or Marketplace release were performed.
+- No remotes, pushes, review publication, or Marketplace release were performed.
 - Source relationships are textual; runtime execution and semantic analysis remain deferred.
 - Credential filename exclusions are a conservative heuristic and cannot detect arbitrary embedded secrets.
 - The model registry and protocol adapters need live API evaluation before a release claim.
