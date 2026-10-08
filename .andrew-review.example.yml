@@ -1,0 +1,36 @@
+version: 1
+
+models:
+  reviewer:
+    provider: openai
+    model: gpt-6.1-sol
+    effort: medium
+  verifier:
+    provider: openai
+    model: gpt-6.1-sol
+    effort: high
+
+summary:
+  instructions: >-
+    Explain the behavioral change and affected consumers.
+    State important compatibility risks without claiming tests passed.
+
+review:
+  instructions: >-
+    Report concrete correctness and security regressions introduced by this change.
+    Trace affected consumers and check existing defenses.
+    Suggest a self-contained code replacement only when source evidence supports it.
+  excludePaths:
+    - "vendor/**"
+
+limits:
+  maxFiles: 250
+  maxFileBytes: 32768
+  maxScanBytes: 1048576
+  maxContextBytes: 65536
+  maxRelatedFiles: 12
+  maxRequests: 8
+  maxToolCalls: 24
+  maxOutputTokens: 8192
+  maxConversationBytes: 524288
+  timeoutSeconds: 180
