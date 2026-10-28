@@ -126,6 +126,8 @@ trunk check --no-fix
 
 Tests create temporary Git repositories and local HTTP servers.
 They do not require API credentials or send review data to model providers.
-Trunk checks formatting, and its pre-commit action runs `npm run check`.
+Trunk checks formatting and verifies GitHub Actions pins and available updates with pinact `4.1.1`.
+Its pre-commit action runs `npm run check`.
+Run `trunk check --all --no-fix` to inspect the full repository.
 
 Read the [specification](docs/specs/2026-10-08-local-review-engine.md), [implementation plan](docs/plans/2026-10-08-local-review-engine.md), and [verification notes](docs/notes/2026-10-08-bootstrap.md).
