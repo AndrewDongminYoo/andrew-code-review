@@ -9,9 +9,12 @@ plugins:
 runtimes:
   enabled:
     - node@24.20.0
+    - python@3.14.4
 lint:
   enabled:
-    - prettier@3.9.9
+    - pinact@4.1.1!:
+        commands: [lint, upgrade]
+    - prettier@3.9.10
 actions:
   definitions:
     - id: project-check-pre-commit
