@@ -3,7 +3,7 @@
 ## Identity
 
 - Repository root: `/Users/dongminyu/Development/01_personal/andrew-code-review`.
-- Account scope: personal, `AndrewDongminYoo`.
+- Account scope: personal.
 - Branch: `main`.
 - Workspace: newly initialized main workspace, with no task-created worktree.
 - GitHub lookup did not resolve a repository with this owner and name at initialization.
