@@ -2,7 +2,7 @@
 
 ## Scope
 
-Refresh the existing Trunk formatter and add the operator-requested GitHub Actions supply-chain check.
+Refresh the existing Trunk formatter and add the requested GitHub Actions supply-chain check.
 Keep application behavior, public interfaces, and the existing project pre-commit gate unchanged.
 
 ## Requirements
