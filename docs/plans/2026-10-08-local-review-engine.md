@@ -75,6 +75,6 @@ A separate verification session checks candidate findings before the engine retu
 
 ## Continuation
 
-The operator already approved the direction and requested implementation.
+The direction was already approved and implementation was requested.
 Continue directly into the local milestone without another planning approval cycle.
 GitHub publication and live paid review evaluation remain separate actions.

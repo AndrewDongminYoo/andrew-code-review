@@ -53,7 +53,7 @@ The pre-commit action passed both a direct invocation and the first authorized r
 Before commit authorization, a disposable Git repository containing the same source and configuration was used to verify the formatter gate.
 A deliberately malformed `prettier-probe.js` produced one formatting issue and exit 1.
 After removing that probe, `trunk check --all --no-fix --filter=prettier` checked 29 files and passed.
-After the operator requested semantic commits, the feature candidate was exported from the index and passed `npm ci --ignore-scripts` and `npm run check` in a separate temporary directory.
+After semantic commits were requested, the feature candidate was exported from the index and passed `npm ci --ignore-scripts` and `npm run check` in a separate temporary directory.
 The first commit, `32f495b`, preserved that verified candidate tree and passed the actual pre-commit hook.
 The native main-repository `trunk check --all --no-fix` then checked 29 files and passed.
 Trunk also displayed a historical action-failure notification for the earlier formatting failure.

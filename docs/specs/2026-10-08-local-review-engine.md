@@ -3,7 +3,7 @@
 ## Approved Direction
 
 Andrew Code Review is a provider-independent review engine for a future public GitHub Marketplace Action.
-The operator approved an independent TypeScript CLI, OpenAI and Anthropic support, affected-code exploration, candidate verification, custom summaries, and explicit SHA-bound results.
+An independent TypeScript CLI, OpenAI and Anthropic support, affected-code exploration, candidate verification, custom summaries, and explicit SHA-bound results were approved.
 This milestone delivers the local engine.
 GitHub App hosting, review publication, and Marketplace releases are subsequent milestones.
 
@@ -82,7 +82,7 @@ Deduplicate identical findings without treating matching line numbers as identit
 
 ## Suggested Code Changes
 
-The operator additionally requested actionable GitHub `suggestion` blocks.
+Actionable GitHub `suggestion` blocks were additionally requested.
 Allow an optional single-file, contiguous replacement attached to a confirmed finding.
 Bind the replacement to exact original text and a head-side changed-line range.
 The verification session must assess the proposed replacement separately from confirming the defect.

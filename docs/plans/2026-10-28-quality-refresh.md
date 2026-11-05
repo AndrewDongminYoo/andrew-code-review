@@ -2,7 +2,7 @@
 
 ## Approved Direction
 
-Apply the operator's repository maintenance request under the [quality tooling specification](../specs/2026-10-28-quality-refresh.md).
+Apply the repository maintenance request under the [quality tooling specification](../specs/2026-10-28-quality-refresh.md).
 Use the current main checkout and a maintenance branch without creating a worktree.
 
 ## Implementation
@@ -28,5 +28,5 @@ Use the current main checkout and a maintenance branch without creating a worktr
 
 ## Publication Boundary
 
-Push and pull request creation require the operator's repository-specific approval.
+Push and pull request creation require the user's repository-specific approval.
 After approval, continue the existing PR loop through current-head CI, hosted review, gated merge, authorized cleanup, and memory recording.
