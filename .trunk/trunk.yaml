@@ -1,6 +1,6 @@
 version: 0.1
 cli:
-  version: 1.25.0
+  version: 1.29.0
 plugins:
   sources:
     - id: trunk
@@ -11,9 +11,13 @@ runtimes:
     - node@24.20.0
     - python@3.14.4
 lint:
+  definitions:
+    - name: pinact
+      commands:
+        - name: upgrade
+          enabled: true
   enabled:
-    - pinact@4.1.1!:
-        commands: [lint, upgrade]
+    - pinact@4.1.1!
     - prettier@3.9.10
 actions:
   definitions:
@@ -25,5 +29,7 @@ actions:
   enabled:
     - project-check-pre-commit
     - trunk-check-pre-push
+    - trunk-upgrade-available
   disabled:
+    - trunk-announce
     - trunk-fmt-pre-commit
